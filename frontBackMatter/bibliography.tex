@@ -1,0 +1,43 @@
+\addtocontents{toc}{\protect\vspace{\beforebibskip}}
+\addcontentsline{toc}{chapter}{\tocEntry{\bibname}}
+\chapter*{Bibliography}
+\label{app:bibliography}
+
+% \manualmark % Work-around to have small caps also here in the headline
+% \markboth{\spacedlowsmallcaps{\bibname}}{\spacedlowsmallcaps{\bibname}} % Work-around to have small caps also
+% %\phantomsection
+% \refstepcounter{dummy}
+
+\bgroup
+\let\chapter\section
+
+% Chapter 1
+\bibliographystyleintro{plain}
+\bibliographyintro{bibliography/thesisBibliography}
+
+% Chapter 2
+\bibliographystyleauton{plain}
+\bibliographyauton{bibliography/thesisBibliography}
+
+% Chapter 3 
+\bibliographystyleslam{plain}
+\bibliographyslam{bibliography/thesisBibliography}
+
+% % Chapter 4
+% \bibliographystylenexus{plain}
+% \bibliographynexus{bibliography/thesisBibliography}
+
+% % Chapter 5
+\bibliographystylepev{plain}
+\bibliographypev{bibliography/thesisBibliography}
+
+% % Chapter 6
+% \bibliographystylebudget{plain}
+% \bibliographybudget{bibliography/thesisBibliography}
+
+% % Chapter 7
+% \bibliographystyleconcl{plain}
+% \bibliographyconcl{bibliography/thesisBibliography}
+
+
+\egroup

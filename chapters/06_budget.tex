@@ -1,0 +1,114 @@
+% Budget for the project
+
+\chapter{Project costs}
+\label{ch:budget}
+
+This section covers the cost of the main components to develop this thesis, namely: hardware and sensors; software and labour.
+
+\section{Hardware}
+
+\subsection{Nexus robot}
+The cost of materials for the Nexus robot is shown in \autoref{tab:nexuscost}:
+\begin{table}[h!]
+  \begin{tabular}{llrrr}
+    \hline
+    \textbf{Component} & \textbf{Site} & \textbf{Unit price (\$/h)} & \textbf{Qty} & \textbf{Total (\$)} \\ \hline
+    Nexus Robot     & Taobao       & 500   & 1 & 500            \\
+    Arduino Mega    & Arduino      & 35    & 1 & 35             \\ 
+    Jetson TX2      & Nvidia       & 610   & 1 & 610            \\ 
+    RPLidar A2      & Seedstudio   & 319   & 1 & 319            \\ 
+    Hokuyo UST-10LX & Robotshop    & 1,680 & 1 & 1,680          \\ 
+    NiMH battery    & Micro Center & 20    & 3 & 60             \\ 
+    USB hub 3.0     & Amazon       & 50    & 1 & 50             \\ \hline
+    \textbf{Total}  &              &       &   & \textbf{3,254} \\ \hline
+  \end{tabular}
+  \caption{Cost of the nexus Robot}
+  \label{tab:nexuscost}
+\end{table}
+
+
+\subsection{PEV}
+The main structure of the PEV was already built so there are no machining costs associated to the fabrication process. The main expenditures were sensors,a s shown on \autoref{tab:pevcost}:
+
+\begin{longtable}{llrrr}
+  \hline
+  \textbf{Component} & \textbf{Site} & \textbf{Unit price (\$/h)} & \textbf{Qty} & \textbf{Total (\$)} \\ \hline
+  \endfirsthead
+  %
+  \multicolumn{5}{c}%
+  {{(\bfseries Continued from previous page)}} \\ \hline
+  \textbf{Component} & \textbf{Site} & \textbf{Unit price (\$/h)} & \textbf{Qty} & \textbf{Total (\$)} \\ \hline
+  \endhead
+
+  \\ \hline \endfoot
+
+  \\ \endlastfoot
+  %
+  Velodyne VLP16        & Velodyne     & 8,000   & 1 & 8,000          \\
+  Hokuyo UTM-30LX       & Hokuyo       & 4,770   & 2 & 9,540          \\ 
+  Xsens MTi-1 IMU       & Xsens        & 399     & 2 & 798            \\ 
+  ZED Stereo camera     & Stereolabs   & 449     & 2 & 898            \\ 
+  Logtech C930-e camera & Robotshop    & 85      & 4 & 340            \\ 
+  Emlid Reach RTK GPS   & Emlid        & 570     & 1 & 570            \\
+  VESC                  & Amazon       & 75      & 2 & 150            \\ 
+  Jetson TX2            & Nvidia       & 610     & 1 & 610            \\
+  Dell Precision 5520   & Dell         & 2,949   & 1 & 2,949          \\
+  Lead--acid battery    & MicroCenter  & 115     & 4 & 460            \\ \hline
+  \textbf{Total}        &              &         &   & \textbf{24,315} \\ \hline
+
+  \caption{Cost of the PEV}
+  \label{tab:pevcost}
+\end{longtable}
+
+\section{Software}
+All of the software utilized was open--source and free, therefore it was costless. Nevertheless, it is listed in \autoref{tab:software} ofr documentation purposes:
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{ll}
+    \hline
+    \textbf{Name}                & \textbf{Developer} \\ \hline
+    Ubuntu 16.04 LTS             & Canonical          \\
+    Robot Operating System (ROS) & OSRF               \\
+    OpenCV                       & OpenCV             \\
+    Tensorflow                   & Google             \\
+    CUDA                         & Nvidia             \\
+    Autoware                     & CPFL               \\ \hline
+  \end{tabular}
+  \caption{Software employed}
+  \label{tab:software}
+\end{table}
+
+\section{Labor}
+
+Labor costs are estimated from the annual salaries of the human labor involved in the development of the project (\autoref{tab:human}).
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{lrrr}
+    \hline
+    \textbf{Labor} & \textbf{Salary (\$/h)} & \textbf{Qty (h)} & \textbf{Total (\$)} \\ \hline
+    Research assistant     & 12 & 960 & 11,520          \\
+    Principal Investigator & 85 & 10  & 850             \\ \hline
+    \textbf{Total}         &    &     & \textbf{12,370} \\ \hline
+  \end{tabular}
+  \caption{Human labor cost}
+  \label{tab:human}
+\end{table}
+
+\section{Total cost}
+
+Assuming a 5 year amortization rate, for the sensors and equipment for the vehicles, the cost of the project for the period is shwon on (\autoref{tab:total}):
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{lrrr}
+    \hline
+    \textbf{Field}      & \textbf{Total (\$)} & \textbf{Amortization (yr)} & \textbf{Per-year (\$)} \\ \hline
+    \textbf{Hardware}   &                     &                            &                        \\
+    - Nexus Robot       & 3,254               & 5                          & 650                    \\
+    - PEV               & 24,315              & 5                          & 4,863                  \\ \hline
+    \textbf{Software}   & 0                   & 0                          & 0                      \\ \hline
+    \textbf{Labor}      & 12,370              & 0                          & 12,370                 \\ \hline
+    \textbf{Total}      &                     &                            & \textbf{17,883}        \\ \hline
+  \end{tabular}
+  \caption{Total cost for the period}
+  \label{tab:total}
+\end{table}

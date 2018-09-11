@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis Typographic Thesis
+% LaTeX Template
+% Version 1.4 (1/1/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% André Miede (http://www.miede.de) with commenting modifications by:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% GNU General Public License (v2)
+%
+% General Tips:
+% 1) Make sure to edit the classicthesis-config.file
+% 2) New enumeration (A., B., C., etc in small caps): \begin{aenumerate} \end{aenumerate}
+% 3) For margin notes: \marginpar or \graffito{}
+% 4) Do not use bold fonts in this style, it is designed around them
+% 5) Use tables as in the examples
+% 6) See classicthesis-preamble.sty for useful commands
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+  oneside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,
+  footinclude=true,cleardoublepage=empty,
+  obeyspaces,
+  dottedtoc, % Make page numbers in the table of contents flushed right with dots leading to them
+  BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
+  ngerman,american, % Languages, change this to your language(s)
+  ]{scrreprt} 
+              
+% Includes the file which contains all the document configurations and packages - make sure to edit this file
+\input{headers/headers}
+
+\newcites{intro}{Chapter 01}
+\newcites{auton}{Chapter 02}
+\newcites{slam}{Chapter 03}
+% \newcites{nexus}{Chapter 04}
+\newcites{pev}{Chapter 05}
+% \newcites{budget}{Chapter 06}
+% \newcites{concl}{Chapter 07}
+
+
+%\hyphenation{Put special hyphenation here}
+
+\begin{document}
+
+\frenchspacing % Reduces space after periods to make text more compact
+
+\raggedbottom % Makes all pages the height of the text on that page
+
+\selectlanguage{american} % Select your default language - e.g. american or ngerman
+
+\pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
+
+\pagestyle{plain} % Suppress headers for the pre-content pages
+
+%----------------------------------------------------------------------------------------
+%	PRE-CONTENT THESIS PAGES
+%----------------------------------------------------------------------------------------
+
+\include{frontBackMatter/titlepage} % Main title page
+
+\include{frontBackMatter/titleback} % Back of the title page
+
+\cleardoublepage\include{frontBackMatter/abstract} % Abstract page
+
+\cleardoublepage\include{frontBackMatter/abstract-esp} % Abstract page in Spanish
+
+\cleardoublepage\include{frontBackMatter/acknowledgements} % Acknowledgements page
+
+\pagestyle{scrheadings} % Show chapter titles as headings
+
+\cleardoublepage\include{frontBackMatter/contents} % Contents, list of figures/tables/listings and acronyms
+
+\cleardoublepage
+
+\pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
+
+\cleardoublepage % Avoids problems with pdfbookmark
+
+% %----------------------------------------------------------------------------------------
+% %	THESIS CONTENT - CHAPTERS
+% %----------------------------------------------------------------------------------------
+
+\include{chapters/01_introduction} % Chapter 1
+\cleardoublepage % Empty page before the start of the next part
+
+\include{chapters/02_autonomousVehicles} % Chapter 2
+\cleardoublepage % Empty page before the start of the next part
+
+\include{chapters/03_slamTechniques} % Chapter 3
+\cleardoublepage % Empty page before the start of the next part
+
+\include{chapters/04_nexusRobot} % Chapter 4
+\cleardoublepage % Empty page before the start of the next part
+
+\include{chapters/05_persuasiveElectricVehicle} % Chapter 5
+\cleardoublepage % Empty page before the start of the next part
+
+\include{chapters/06_budget} % Chapter 6
+\cleardoublepage % Empty page before the start of the next part
+
+\include{chapters/07_conclusions} % Chapter 7
+\cleardoublepage % Empty page before the start of the next part
+
+% %----------------------------------------------------------------------------------------
+% %	POST-CONTENT THESIS PAGES
+% %----------------------------------------------------------------------------------------
+
+\cleardoublepage\include{frontBackMatter/bibliography} % Bibliography
+
+%----------------------------------------------------------------------------------------
+
+
+% %----------------------------------------------------------------------------------------
+% %	THESIS CONTENT - APPENDICES
+% %----------------------------------------------------------------------------------------
+
+\appendix
+
+% \part{Appendix} % New part of the thesis for the appendix
+
+% \include{chapters/Chapter0A} % Appendix A
+\include{annexes/annex0C} % Appendix C
+
+\end{document}
